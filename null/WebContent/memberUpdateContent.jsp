@@ -3,34 +3,16 @@
 <!DOCTYPE html>
 <table style="width: 100%">
 	<tr>
-		<td style="width: 23%; vertical-align: top;">
-			<div class="card" style="width: 18rem;">
-			  <ul class="list-group list-group-flush">
-			  	<li class="list-group-item">
-			  		<a href="#" style="color: black;">
-						회원정보 수정
-					</a>
-			  	</li>
-			    <li class="list-group-item">
-			  		<a href="./cookingClassCheck.jsp" style="color: black;">
-						쿠킹클래스 확인
-					</a>
-			  	</li>
-			  	<li class="list-group-item">
-			  		<a href="./joinChef.jsp" style="color: black;">
-						셰프 등록
-					</a>
-			  	</li>
-			  	<li class="list-group-item">
-			  		<a href="./memberOut.jsp" style="color: black;">
-						회원 탈퇴
-					</a>
-			  	</li>
-			  </ul>
+		<td style="width: 20%; vertical-align: top;">
+			<div class="btn-group-vertical" style="width: 100%;">
+				 <button type="button" class="btn btn-outline-dark active" style="text-align: left;" onclick="memberUpdateContent()">회원정보 수정</button>
+				 <button type="button" class="btn btn-outline-dark" style="text-align: left;" onclick="cookingClassCheckContent()">쿠킹클래스 확인</button>
+				 <button type="button" class="btn btn-outline-dark" style="text-align: left;" onclick="joinChefContent()">셰프 등록</button>
+				 <button type="button" class="btn btn-outline-dark" style="text-align: left;" onclick="memberOutContent()">회원 탈퇴</button>
 			</div>
 		</td>
-		<td style="width: 77%">
-			<form>
+		<td style="width: 80%">
+			<form method="get" action="#">
 			<table align="left" style="width: 70%">
 				<tr style="height: 80px;">
 					<td style="width: 50%; text-align: center;">

@@ -6,6 +6,37 @@
 <meta charset="UTF-8">
 <%@ include file="/common/bootstrap_common.jsp"%>
 <title>오늘 뭐 먹지?</title>
+<script type="text/javascript">
+function cookingClassRegisterContent(){
+    $.ajax({
+      type : "GET",
+      url : "./cookingClassRegisterContent.jsp",
+      dataType : "text",
+      error : function() {
+        alert('통신실패!!');
+      },
+      success : function(data) {
+        $('#tb_ajax').html(data);
+      }
+
+    });
+  }
+
+function cookingClassSignUpContent(){
+    $.ajax({
+      type : "GET",
+      url : "./cookingClassSignUpContent.jsp",
+      dataType : "text",
+      error : function() {
+        alert('통신실패!!');
+      },
+      success : function(data) {
+        $('#tb_ajax').html(data);
+      }
+
+    });
+  }
+</script>
 </head>
 <body>
 	<table align="center" style="width: 70% ; height: 100%;">
@@ -27,8 +58,8 @@
 			
 			<!-- Content -->
 		<tr>
-			<td style="padding-top: 4%">
-				<%@ include file="./cookingClassContent.jsp" %>
+			<td style="padding-top: 4%" id="tb_ajax">
+				<%@ include file="./cookingClassRegisterContent.jsp" %>
 			</td>
 		</tr>
 			<!-- End Content -->

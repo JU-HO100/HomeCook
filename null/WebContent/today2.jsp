@@ -15,28 +15,28 @@
 		  <table class="table table-hover">
 		    <tbody>
 		      <tr>
-		      	<td style="width: 20%">
+		      	<td style="width: 20%; height: 100px;">
 		      		<input type="image" src="./images/food3.jpg" style="width: 100%;">
 		      	</td>
 		        <td style="width: 60%">중식 요리1</td>
 		        <td style="width: 20%">셰프1</td>
 		      </tr>
 		      <tr>
-		      	<td>
+		      	<td style="width: 20%; height: 100px;">
 		      		<input type="image" src="./images/food3.jpg" style="width: 100%;">
 		      	</td>
 		        <td>중식 요리2</td>
 		        <td>셰프2</td>
 		      </tr>
 		      <tr>
-		      	<td>
+		      	<td style="width: 20%; height: 100px;">
 		      		<input type="image" src="./images/food3.jpg" style="width: 100%;">
 		      	</td>
 		        <td>중식 요리3</td>
 		        <td>셰프3</td>
 		      </tr>
 		      <tr>
-		      	<td>
+		      	<td style="width: 20%; height: 100px;">
 		      		<input type="image" src="./images/food3.jpg" style="width: 100%;">
 		      	</td>
 		        <td>중식 요리4</td>

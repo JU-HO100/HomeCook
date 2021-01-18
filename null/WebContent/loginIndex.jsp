@@ -5,7 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <%@ include file="/common/bootstrap_common.jsp"%>
+<%@ include file="/common/kakao_common.jsp"%>
 <title>오늘 뭐 먹지?</title>
+<script type="text/javascript">
+
+</script>
+
 </head>
 <body>
 	<table align="center" style="width: 70% ; height: 100%;">

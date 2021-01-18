@@ -4,28 +4,14 @@
 <table style="width: 100%">
 	<tr>
 		<td style="width: 23%; vertical-align: top;">
-			<div class="card" style="width: 18rem;">
-			  <ul class="list-group list-group-flush">
-			  	<li class="list-group-item">
-			  		<a href="#" style="color: black;">
-						레시피 관리
-					</a>
-			  	</li>
-			    <li class="list-group-item">
-			  		<a href="./adminCookingClass.jsp" style="color: black;">
-						쿠킹클래스 관리
-					</a>
-			  	</li>
-			  	<li class="list-group-item">
-			  		<a href="./adminMemberManagement.jsp" style="color: black;">
-						회원 관리
-					</a>
-			  	</li>
-			  </ul>
+			<div class="btn-group-vertical" style="width: 100%;">
+				 <button type="button" class="btn btn-outline-dark" style="text-align: left;" onclick="recipeControl()">레시피 관리</button>
+				 <button type="button" class="btn btn-outline-dark active" style="text-align: left;"  onclick="#">쿠킹클래스 관리</button>
+				 <button type="button" class="btn btn-outline-dark" style="text-align: left;" onclick="memberControl()">회원 관리</button>
 			</div>
 		</td>
 		<td style="width: 77%; padding-left: 5%; padding-right: 5%;">
-						<table class="easyui-datagrid" title="레시피 관리"
+						<table class="easyui-datagrid" title="쿠킹 클래스 관리"
 							style="width: 100%; height: 250px"
 							data-options="rownumbers:true,singleSelect:true,url:'datagrid_data1.json',method:'get',toolbar:'#tb',footer:'#ft'">
 							<thead>

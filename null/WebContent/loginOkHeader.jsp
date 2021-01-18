@@ -1,5 +1,50 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+<%@ include file="/common/kakao_common.jsp" %>
+	<script>
+	Kakao.init('f61c36ee28b1fe4d00e270bcf75d344d');
+	
+		const userinfo = document.querySelector('#userinfo') //user를 json문자열로 변환해서 저장해두기
+		if (userinfo) userinfo.value = JSON.stringify(user)
+		Kakao.API.request({
+	      url: '/v2/user/me',//사용자 정보 가져오기
+	      success: function(res) {
+	       	let user = response.kakao_account
+// 	   	var userID = res.id;      //유저의 카카오톡 고유 id
+// 	   	var userEmail = res.kaccount_email;   //유저의 이메일
+// 	   	var userNickName = res.properties.nickname; //유저가 등록한 별명
+	   	
+// 	   	console.log(userID);
+// 	   	console.log(userEmail);
+// 	   	console.log(userNickName);
+      	}
+      });
+	
+		
+	  function kakaoLogout() {
+		    if (Kakao.Auth.getAccessToken()) {
+		      //토큰이 있으면
+		      Kakao.API.request({
+		        //로그아웃하고
+		        url: '/v1/user/unlink',// 연결 끊기
+		        success: function (response) {
+		        	alert(response);
+// 		          	console.log(response)
+		        },
+		        fail: function (error) {
+		          console.log(error)
+		        },
+		      })
+		      //토큰도 삭제
+		      Kakao.Auth.setAccessToken(undefined)
+		      //유저정보도 삭제
+		      const userinfoElem = document.querySelector('#userinfo') 
+		      if(userinfoElem) userinfoElem.value = ''
+		      location.href="./index.jsp";
+		    }
+		  }
+	</script>
 	<table style="width: 100%;">
 		<tr>
 			<td style="width: 30%; text-align: center;">
@@ -19,7 +64,7 @@
 			</form>
 		</td>
 			<td style="width: 12%;  padding-top: 32px; text-align: right;">
-				<p style="font-family: Black Han Sans, sans-serif; color: black;">안준헌님 환영합니다</p>
+				<p style="font-family: Black Han Sans, sans-serif; color: black;"> 님 환영합니다.</p>
 			</td>
 			<td style="width: 8%;  padding-top: 15px; text-align: right">
 				<a href="./mypage.jsp" style="font-family: Black Han Sans, sans-serif; color: black;">
@@ -28,9 +73,11 @@
 				&nbsp;&nbsp;&nbsp;
 			</td>
 			<td style="width: 8%; padding-top: 15px; padding-left:5px; text-align: left; ">
-				<a href="./index.jsp" style="font-family: Black Han Sans, sans-serif; color: black;">
-					로그아웃
-				</a>
+<!-- 				<a href="./index.jsp" style="font-family: Black Han Sans, sans-serif; color: black;"> -->
+<!-- 					로그아웃 -->
+<!-- 				</a> -->
+ 			<button id="kakaoLogout" onclick="kakaoLogout()">로그아웃</button>
 			</td>
+			
 		</tr>
 	</table>

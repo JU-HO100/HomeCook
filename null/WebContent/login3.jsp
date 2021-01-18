@@ -68,11 +68,9 @@ export default {
 		</td>	
 	</tr>
 	<tr>
-		<td align="center">
-			<%@ include file="/kakaoLogin.jsp" %>
-			<br>
-			<%@ include file="/naverLogin.jsp" %>
-		</td>
+		<td align="center" style="padding-bottom: 8%">
+			<%@ include file="./kakaoLogin.jsp" %>
+		</td>		
 	</tr>
 	<tr>
 		<td>
@@ -81,6 +79,7 @@ export default {
 	</tr>	
 </table>
 <script type='text/javascript'>
+
     //<![CDATA[
    // 사용할 앱의 JavaScript 키를 설정해 주세요.
 	Kakao.init('f61c36ee28b1fe4d00e270bcf75d344d');
@@ -91,22 +90,18 @@ export default {
 	 	alert(JSON.stringify(authObj));
 	 // 로그인 성공시, API를 호출합니다.
 	     Kakao.API.request({
-	      url: '/v2/user/me',
-	      success: function(response) {
-	       	var user = response.kakao_account //계정 정보
-// 	       	console.log(response);
-	       	user.host = 'kakao'
-// 	    	const userinfo = document.querySelector('#userinfo') //user를 json문자열로 변환해서 저장해두기
-// 	    	if (userinfo) userinfo.value = JSON.stringify(user)
-	    	
-// 	       	var userID = response.id;      //유저의 카카오톡 고유 id
-// 	       	var userEmail = response.kaccount_email;   //유저의 이메일
-// 	       	var userNickName = response.properties.nickname; //유저가 등록한 별명
-	       	
-// 	       	console.log(userID);
-// 	       	console.log(userEmail);
-// 	       	console.log(userNickName);
-	      	},
+	      url: '/v1/user/me',
+	      success: function(res) {
+	       console.log(res);
+	       
+	       var userID = res.id;      //유저의 카카오톡 고유 id
+	       var userEmail = res.kaccount_email;   //유저의 이메일
+	       var userNickName = res.properties.nickname; //유저가 등록한 별명
+	       
+	       console.log(userID);
+	       console.log(userEmail);
+	       console.log(userNickName);
+	      },
 	      fail: function(error) {
 	          alert(JSON.stringify(error));
 	         }
@@ -121,7 +116,6 @@ export default {
 	  }
 });
  //
-	
 
  </script>
 </body>

@@ -4,21 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>오늘 뭐 먹지?</title>
 <%@ include file="/common/bootstrap_common.jsp"%>
+<title>오늘 뭐 먹지?</title>
 <script type="text/javascript">
-	function recipeView(){
-  		$('#dlg_recipeDetail').dialog({
-  		    title: '__요리',
-  		    width: 800,
-  		    height: 800,
-  		    closed: true,
-  		    cache: false,
-  		    href: './recipeDetail.jsp',//나중에 쿼리스트링으로 값 보내기
-  		    modal: true
-  		});  		
-  		$('#dlg_recipeDetail').dialog('open');
-  	}
+function memberControl() {
+	location.href="./memberControl.jsp";
+}
+function blackList() {
+	location.href="./blackList.jsp";
+}
 </script>
 </head>
 <body>
@@ -26,7 +20,7 @@
 			<!-- Header -->
 		<tr>
 			<td style="width: 100%; padding-top: 2%; padding-bottom: 2%;">
-				<%@ include file="./header.jsp"%>
+				<%@ include file="./adminHeader.jsp"%>
 			</td>
 		</tr>
 			<!-- END Header -->
@@ -39,17 +33,17 @@
 		</tr>
 			<!-- END NavBar -->
 			
-			<!-- Content -->
+			<!-- END Mypage -->
 		<tr>
 			<td style="padding-top: 4%">
-				<%@ include file="./recipeRankingContent.jsp" %>
+				<%@ include file="./blackListContent.jsp" %>
 			</td>
-		</tr>			
-			<!-- Content -->
+		</tr>
+			<!-- END Mypage -->
 			
 			<!-- Footer -->
 		<tr>
-			<td style="padding-top: 8%">
+			<td>
 				<%@ include file="./footer.jsp" %>
 			</td>
 		</tr>

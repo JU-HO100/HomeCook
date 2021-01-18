@@ -9,6 +9,7 @@ pageEncoding="UTF-8"%>
 				<ul class="carousel-indicators">
 					<li data-target="#demo" data-slide-to="0" class="active"></li>
 					<li data-target="#demo" data-slide-to="1"></li>
+					<li data-target="#demo" data-slide-to="2"></li>
 				</ul>
 
 				<!--The slideshow -->
@@ -18,6 +19,9 @@ pageEncoding="UTF-8"%>
 					</div>
 					<div class="carousel-item">
 						<img src="./images/index2.jpg" style="width: 100%; height: 100%;">
+					</div>
+					<div class="carousel-item">
+						<img src="./images/index3.jpg" style="width: 100%; height: 100%;">
 					</div>
 				</div>
 

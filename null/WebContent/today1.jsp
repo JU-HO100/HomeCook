@@ -14,28 +14,28 @@
 		  <h1 style="font-family: 'Nanum Pen Script', cursive; padding-left: 10px;">오늘의 한식</h1>
 		  <table class="table table-hover">
 		    <tbody>
-		      <tr>
-		      	<td style="width: 20%">
+		      <tr style="cursor: pointer;">
+		      	<td style="width: 20%;">
 		      		<input type="image" src="./images/food.jpg" style="width: 100%;">
 		      	</td>
 		        <td style="width: 60%">한식 요리1</td>
 		        <td style="width: 20%">셰프1</td>
 		      </tr>
-		      <tr>
+		       <tr style="cursor: pointer;">
 		      	<td>
 		      		<input type="image" src="./images/food.jpg" style="width: 100%;">
 		      	</td>
 		        <td>한식 요리2</td>
 		        <td>셰프2</td>
 		      </tr>
-		      <tr>
+		       <tr style="cursor: pointer;">
 		      	<td>
 		      		<input type="image" src="./images/food.jpg" style="width: 100%;">
 		      	</td>
 		        <td>한식 요리3</td>
 		        <td>셰프3</td>
 		      </tr>
-		      <tr>
+		       <tr style="cursor: pointer;">
 		      	<td>
 		      		<input type="image" src="./images/food.jpg" style="width: 100%;">
 		      	</td>

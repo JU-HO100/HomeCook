@@ -1,24 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<table>
+<table style="width: 100%">
 	<tr>
-		<td style="width: 23%; vertical-align: top;">
-			<div class="card" style="width: 18rem;">
-			  <ul class="list-group list-group-flush">
-			  	<li class="list-group-item">
-			  		<a href="./cookingClass.jsp" style="color: black;">
-						쿠킹클래스 등록
-					</a>
-			  	</li>
-			  	<li class="list-group-item">
-			  		<a href="./applicationClass.jsp" style="color: black;">
-						쿠킹클래스 신청
-					</a>
-			  	</li>
-			  </ul>
+		<td style="width: 20%; vertical-align: top;">
+			<div class="btn-group-vertical" style="width: 100%;">
+				 <button type="button" class="btn btn-outline-dark" style="text-align: left;" onclick="cookingClassRegisterContent()">쿠킹 클래스 등록</button>
+				 <button type="button" class="btn btn-outline-dark active" style="text-align: left;" onclick="cookingClassSignUpContent()">쿠킹 클래스 신청</button>
 			</div>
 		</td>
-		<td style="width: 77%; padding-left: 90px; padding-bottom: 100px;">
+		<td style="width: 80%;">
 			<div class="col-lg-9">
 			<div class="card">
 				<div class="row no-gutters">

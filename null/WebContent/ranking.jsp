@@ -9,7 +9,7 @@
 <script type="text/javascript">
 	function chefView(){
   		$('#dlg_chefDetail').dialog({
-  		    title: '__셰프님',
+  		    title: '__셰프님', //셰프이름 데이터 받자
   		    width: 800,
   		    height: 800,
   		    closed: true,
@@ -19,6 +19,47 @@
   		});  		
   		$('#dlg_chefDetail').dialog('open');
   	}
+	function recipeView(){
+  		$('#dlg_recipeDetail').dialog({
+  		    title: '__요리',
+  		    width: 800,
+  		    height: 800,
+  		    closed: true,
+  		    cache: false,
+  		    href: './recipeDetail.jsp',//나중에 쿼리스트링으로 값 보내기
+  		    modal: true
+  		});  		
+  		$('#dlg_recipeDetail').dialog('open');
+  	}
+	function rankingChefContent(){
+	    $.ajax({
+	      type : "GET",
+	      url : "rankingChefContent.jsp",
+	      dataType : "text",
+	      error : function() {
+	        alert('통신실패!!');
+	      },
+	      success : function(data) {
+	        $('#tb_ajax').html(data);
+	      }
+
+	    });
+	  }
+
+	function rankingRecipeContent(){
+	    $.ajax({
+	      type : "GET",
+	      url : "rankingRecipeContent.jsp",
+	      dataType : "text",
+	      error : function() {
+	        alert('통신실패!!');
+	      },
+	      success : function(data) {
+	        $('#tb_ajax').html(data);
+	      }
+
+	    });
+	  }
 </script>
 </head>
 <body>
@@ -41,8 +82,8 @@
 			
 			<!-- Content -->
 		<tr>
-			<td style="padding-top: 4%">
-				<%@ include file="./rankingContent.jsp" %>
+			<td style="padding-top: 4%" id="tb_ajax">
+				<%@ include file="./rankingChefContent.jsp" %>
 			</td>
 		</tr>			
 			<!-- Content -->
